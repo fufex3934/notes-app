@@ -1,11 +1,14 @@
+'use client'
 import { connectToDB } from '@/dbConfig/db'
 import Note from '@/models/Note'
 import Link from 'next/link'
 import { deleteNote } from './lib/actions'
 
+
 export default async function NotesPage() {
   await connectToDB()
   const notes = await Note.find().lean()
+  
 
   return (
     <div className="max-w-2xl mx-auto p-4">

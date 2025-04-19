@@ -3,7 +3,7 @@ import Note from "@/models/Note"
 import { updateNote } from "@/app/lib/actions"
 import mongoose from "mongoose"
 
-type NoteType = {
+export  type NoteType = {
   _id: string | mongoose.Types.ObjectId
   title: string
   description: string
