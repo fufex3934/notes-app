@@ -14,5 +14,5 @@ export async function createNote(formData:FormData) {
     await connectToDB();
     await Note.create({title,description});
 
-    revalidatePath('/notes');
+    revalidatePath('/');
 }
